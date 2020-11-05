@@ -1,0 +1,17 @@
+Program sequence - If asked by Sir
+
+Celsy - index, database formation
+Mrunal - donor-red, donor-list
+Sachin - connection, admin-home
+Kshitij - m1, s1
+Ameya- stock-blood-list, logout
+
+
+
+PPT sequence
+
+Slides 1, 2, 3 - Ameya
+Slides 4 - Kshitij
+Slides 5, 6 - Celsy
+Slides 7, 8 - Mrunal
+Slides 9, 10 - Sachin
