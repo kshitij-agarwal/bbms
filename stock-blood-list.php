@@ -10,8 +10,7 @@ session_start();
     <title>Donor Registration</title>
     <link rel="stylesheet" type="text/css" href="css/s1.css">
     <style type="text/css">
-        td 
-        {
+        td {
             width: 200px;
             height: 40px;
         }
@@ -28,13 +27,12 @@ session_start();
 
             <div id="body">
                 <br>
-                    <?php
-                        $un = $_SESSION['un'];
-                        if (!$un) 
-                        {
-                            header("Location:index.php");
-                        }
-                    ?>
+                <?php
+                $un = $_SESSION['un'];
+                if (!$un) {
+                    header("Location:index.php");
+                }
+                ?>
 
                 <h1>Stock Blood list</h1>
                 <center>
@@ -42,19 +40,14 @@ session_start();
                         <table>
                             <tr>
                                 <td>
-                                    <center>
-                                        <b>
+                                    <center><b>
                                             <font color="blue">Name</font>
-                                        </b>
-                                    </center>
+                                        </b></center>
                                 </td>
-
                                 <td>
-                                    <center>
-                                        <b>
+                                    <center><b>
                                             <font color="blue">Quantity</font>
-                                        </b>
-                                    </center>
+                                        </b></center>
                                 </td>
                             </tr>
 
@@ -65,8 +58,78 @@ session_start();
                                 <td>
                                     <center>
                                         <?php
-                                            $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='O+'");
-                                            echo $row = $q->rowcount();
+                                        $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='O+'");
+                                        echo $row = $q->rowcount();
+                                        ?>
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <center>O-</center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <?php
+                                        $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='O-'");
+                                        echo $row = $q->rowcount();
+                                        ?>
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <center>A+</center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <?php
+                                        $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='A+'");
+                                        echo $row = $q->rowcount();
+                                        ?>
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <center>A-</center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <?php
+                                        $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='A-'");
+                                        echo $row = $q->rowcount();
+                                        ?>
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <center>B+</center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <?php
+                                        $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='B+'");
+                                        echo $row = $q->rowcount();
+                                        ?>
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <center>B-</center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <?php
+                                        $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='B-'");
+                                        echo $row = $q->rowcount();
                                         ?>
                                     </center>
                                 </td>
@@ -79,12 +142,13 @@ session_start();
                                 <td>
                                     <center>
                                         <?php
-                                            $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='AB+'");
-                                            echo $row = $q->rowcount();
+                                        $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='AB+'");
+                                        echo $row = $q->rowcount();
                                         ?>
                                     </center>
                                 </td>
                             </tr>
+
                             <tr>
                                 <td>
                                     <center>AB-</center>
@@ -92,12 +156,13 @@ session_start();
                                 <td>
                                     <center>
                                         <?php
-                                            $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='AB-'");
-                                            echo $row = $q->rowcount();
+                                        $q = $db->query("SELECT *FROM donor_registration WHERE bgroup='AB-'");
+                                        echo $row = $q->rowcount();
                                         ?>
                                     </center>
                                 </td>
                             </tr>
+
                         </table>
                     </div>
                 </center>
@@ -105,12 +170,11 @@ session_start();
 
             <div id="footer">
                 <h4 align="center">SDP Project</h4>
-                <p align="center">
-                    <a href="logout.php">
+                <p align="center"><a href="logout.php">
                         <font color="white">Logout</font>
-                    </a>
-                </p>
+                    </a></p>
             </div>
+
         </div>
     </div>
 </body>
